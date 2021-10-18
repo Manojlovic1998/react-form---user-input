@@ -45,7 +45,7 @@ const BasicForm = (props) => {
         reset: emailInputReset,
     } = useInput(isEmail);
 
-
+    const emailClasses = !emailHasError ? "form-control" : "form-control invalid";
     // Form Validity Status
     let formIsValid = false;
 
@@ -80,7 +80,7 @@ const BasicForm = (props) => {
                     {lastNameHasError && <small className={"error-text"}>This field must not be emtpy.</small>}
                 </div>
             </div>
-            <div className='form-control'>
+            <div className={emailClasses}>
                 <label htmlFor='email'>E-Mail Address</label>
                 <input onBlur={emailBlurHandler} onChange={emailChangeHandler} value={enteredEmail} type='email'
                        id='email'/>
