@@ -42,12 +42,6 @@ const SimpleInput = (props) => {
     // Form Submission <---------
     const formSubmissionHandler = event => {
         event.preventDefault();
-        // All inputs are treated as touched once form is sub..
-
-        if (!enteredNameIsValid) {
-            return;
-        }
-
 
         console.log(enteredEmail.trim());
         console.log(enteredName.trim());
